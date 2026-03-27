@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hayat Dent - Luxury Dental Clinic. Minimal, clean, and modern care.">
+    <title>Hayat Dent | Premium Dental Care</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="topbar" id="topbar">
+        <!-- Mobile Hamburger Toggle inside topbar -->
+        <button class="mobile-toggle glassy" id="mobileToggle" aria-label="Toggle Navigation">
+            <i class="ph ph-list"></i>
+        </button>
+        
+        <a href="#home" class="topbar-logo" style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="data:image/jpeg;base64,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" alt="Hayat Dent logo" style="height: 34px; width: 34px; object-fit: cover; border-radius: 6px;">
+            <span class="logo-text">Hayat<span class="fw-light">Dent.</span></span>
+        </a>
+
+        <div class="topbar-right">
+            <a href="https://wa.me/77770443335" target="_blank" class="topbar-icon" aria-label="WhatsApp">
+                <i class="ph ph-whatsapp-logo"></i>
+            </a>
+            <a href="#contact" class="btn btn-gold topbar-btn" data-en="Book Now" data-kz="Жазылу">Book Now</a>
+        </div>
+    </header>
+
+    <!-- LEFT SIDEBAR (Off-Canvas Drawer) -->
+    <aside class="sidebar glassy" id="sidebar">
+        <div class="sidebar-top">
+            <a href="#home" class="logo">
+                <span class="logo-text">Hayat<br><span class="fw-light">Dent.</span></span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active" data-en="Home" data-kz="Басты бет">Home</a>
+                <a href="#services" class="nav-link" data-en="Services" data-kz="Қызметтер">Services</a>
+                <a href="#about" class="nav-link" data-en="About Clinic" data-kz="Клиника туралы">About Clinic</a>
+                <a href="#team" class="nav-link" data-en="Our Doctors" data-kz="Дәрігерлер">Our Doctors</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-kz="Байланыс">Contact</a>
+                <a href="#gallery" class="nav-link" data-en="Gallery" data-kz="Галерея">Gallery</a>
+                <a href="#testimonials" class="nav-link" data-en="Reviews" data-kz="Пікірлер">Reviews</a>
+                <a href="#faq" class="nav-link" data-en="FAQ" data-kz="Сұрақ-Жауап">FAQ</a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="https://wa.me/77770443335" target="_blank" class="sidebar-wa-btn glassy-button">
+                <i class="ph-fill ph-whatsapp-logo"></i>
+                <span data-en="Chat with us" data-kz="Бізбен сөйлесу">Chat with us</span>
+            </a>
+                        <a href="#contact" class="sidebar-contact-btn glassy-button" style="margin-top: 0.75rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                <i class="ph ph-phone"></i>
+                <span data-en="Contact" data-kz="Байланыс">Contact</span>
+            </a>
+                        <div class="language-selector">
+                <span class="lang-option active" data-lang="en">EN</span>
+                <span class="lang-divider">|</span>
+                <span class="lang-option" data-lang="kz">KZ</span>
+            </div>
+            
+            <div class="social-mini">
+                <a href="https://www.instagram.com/hayatdent.kz/" aria-label="Instagram" target="_blank"><i class="ph ph-instagram-logo"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Overlay underlying the sidebar to close it -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
+
+        <!-- 1. HERO SLIDER SECTION -->
+        <section id="home" class="hero section-full">
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=2070" alt="Aesthetic dentistry veneers" class="slide-bg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=2070" alt="Professional teeth whitening treatment" class="slide-bg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=2070" alt="Smile alignment consultation" class="slide-bg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1574375295739-72bb122f41f8?auto=format&fit=crop&q=80&w=2070" alt="Bright healthy smile" class="slide-bg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1588774062119-78d190ae2b56?auto=format&fit=crop&q=80&w=2070" alt="Luxury dental clinic interior" class="slide-bg">
+                    </div>
+                </div>
+                <!-- Pagination & Navigation -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next hero-nav"></div>
+                <div class="swiper-button-prev hero-nav"></div>
+            </div>
+
+            <!-- Hero Content Floating Over Slider -->
+            <div class="hero-overlay-content pointer-events-none">
+                <div class="container h-100 flex-center">
+                    <div class="hero-text-box glassy pointer-events-auto reveal">
+                        <span class="subtitle text-gold" data-en="Luxury Dental Studio" data-kz="Люкс стоматологиясы">Luxury Dental Studio</span>
+                        <h1 class="hero-title" data-en="Elevate Your Smile" data-kz="Күлімсіреуіңізді жақсартыңыз">Elevate Your Smile</h1>
+                        <p class="hero-desc" data-en="Experience a new standard of dental care where modern aesthetics meet ultimate comfort." data-kz="Заманауи эстетика мен жоғары жайлылық үйлесетін стоматологиялық көмектің жаңа стандартын сезініңіз.">Experience a new standard of dental care where modern aesthetics meet ultimate comfort.</p>
+                        
+                        <div class="hero-cta-group reveal-item">
+                            <a href="#contact" class="btn btn-gold" data-en="Book Appointment" data-kz="Жазылу">Book Appointment</a>
+                            <a href="#services" class="btn btn-glass" data-en="Explore Services" data-kz="Қызметтерді көру">Explore Services</a>
+                        </div>
+                        
+                        <div class="hero-trust-badges reveal-item">
+                            <div class="badge-item"><i class="ph-fill ph-check-circle text-gold"></i> <span data-en="10+ Years Experience" data-kz="10+ Жыл Тәжірибе">10+ Years Experience</span></div>
+                            <div class="badge-item"><i class="ph-fill ph-check-circle text-gold"></i> <span data-en="5k+ Happy Patients" data-kz="5k+ Бақытты Пациенттер">5k+ Happy Patients</span></div>
+                            <div class="badge-item"><i class="ph-fill ph-check-circle text-gold"></i> <span data-en="Advanced Technology" data-kz="Озық Технология">Advanced Technology</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- 2. TRUST HIGHLIGHTS -->
+        <section class="trust-section">
+            <div class="container">
+                <div class="trust-grid glassy reveal">
+                    <div class="trust-card">
+                        <div class="trust-icon-wrapper"><i class="ph-light ph-star text-gold"></i></div>
+                        <h4 data-en="Leading Experts" data-kz="Жетекші сарапшылар">Leading Experts</h4>
+                        <p data-en="Renowned specialists focused on perfect results." data-kz="Тамаша нәтижелерге бағытталған танымал мамандар.">Renowned specialists focused on perfect results.</p>
+                    </div>
+                    <div class="trust-card divider-card">
+                        <div class="trust-icon-wrapper"><i class="ph-light ph-shield-check text-gold"></i></div>
+                        <h4 data-en="Advanced Tech" data-kz="Озық технология">Advanced Tech</h4>
+                        <p data-en="Precision dentistry using 3D imaging & microscopy." data-kz="3D бейнелеу мен микроскопияны қолданатын дәл стоматология.">Precision dentistry using 3D imaging & microscopy.</p>
+                    </div>
+                    <div class="trust-card divider-card">
+                        <div class="trust-icon-wrapper"><i class="ph-light ph-gear-six text-gold"></i></div>
+                        <h4 data-en="Cutting-Edge Implants" data-kz="Озық импланттар">Cutting-Edge Implants</h4>
+                        <p data-en="State-of-the-art implant systems with fast healing and durability." data-kz="Жылдам сауықтыру және ұзақ өмір сыйлайтын заманауи имплант жүйелері.">State-of-the-art implant systems with fast healing and durability.</p>
+                    </div>
+                    <div class="trust-card">
+                        <div class="trust-icon-wrapper"><i class="ph-light ph-armchair text-gold"></i></div>
+                        <h4 data-en="Anxiety-Free" data-kz="Уайымсыз">Anxiety-Free</h4>
+                        <p data-en="A calming, luxurious environment for your comfort." data-kz="Сіздің жайлылығыңыз үшін тыныш, сәнді орта.">A calming, luxurious environment for your comfort.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SERVICES (Glassy Cards) -->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="subtitle">Treatments</span>
+                    <h2 class="title">Bespoke Dental Services</h2>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-glass-card reveal-item">
+                        <div class="service-glass-img">
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" alt="Veneers">
+                        </div>
+                        <div class="service-glass-content">
+                            <h3>Aesthetic Dentistry</h3>
+                            <p>Premium veneers and comprehensive smile makeovers tailored for natural beauty.</p>
+                        </div>
+                    </div>
+                    <div class="service-glass-card reveal-item">
+                        <div class="service-glass-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6kdDvC-XVkSpXBUVQJPKbFVoLvoyxhClJVg&s" alt="Implants">
+                        </div>
+                        <div class="service-glass-content">
+                            <h3>Implantology</h3>
+                            <p>State-of-the-art dental implants designed for permanent, seamless restoration.</p>
+                        </div>
+                    </div>
+                    <div class="service-glass-card reveal-item">
+                        <div class="service-glass-img">
+                            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=800" alt="Orthodontics">
+                        </div>
+                        <div class="service-glass-content">
+                            <h3>Orthodontics</h3>
+                            <p>Invisible aligners and advanced braces for a perfectly aligned, confident smile.</p>
+                        </div>
+                    </div>
+                    <div class="service-glass-card reveal-item">
+                        <div class="service-glass-img">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" alt="Whitening">
+                        </div>
+                        <div class="service-glass-content">
+                            <h3>Laser Whitening</h3>
+                            <p>Safe, highly effective professional whitening for immediate radiance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ABOUT CLINIC -->
+        <section id="about" class="section about-section">
+            <div class="container about-grid">
+                <div class="about-text reveal">
+                    <span class="subtitle text-gold">The Hayat Dent Philosophy</span>
+                    <h2 class="title">Where Science Meets Art</h2>
+                    <p>Originating in Almaty, Hayat Dent represents a paradigm shift in oral care. We have curated a clinic that feels less like a medical facility and more like a luxury wellness retreat.</p>
+                    <p>Every procedure is executed with meticulous attention to detail, leveraging the finest materials and profound clinical expertise. We believe true luxury is transparency, comfort, and results that exceed expectations.</p>
+                    <a href="#team" class="link-arrow">Meet the Specialists <i class="ph ph-arrow-right"></i></a>
+                </div>
+                <div class="about-visuals reveal">
+                    <div class="glass-frame shadow-hover">
+                        <img src="https://images.unsplash.com/photo-1551076805-e166946bc9ae?auto=format&fit=crop&q=80&w=800" alt="Clinic Team">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. DOCTORS / TEAM -->
+        <section id="team" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="subtitle">Our Guild</span>
+                    <h2 class="title">Masters of Dentistry</h2>
+                </div>
+                
+                <div class="team-flex">
+                    <div class="team-glass-card reveal-item">
+                        <div class="team-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800" alt="Doctor 1">
+                        </div>
+                        <div class="team-info text-center">
+                            <h3>Dr. Kazybek</h3>
+                            <span>Implant Surgery & Prosthetics</span>
+                        </div>
+                    </div>
+                    <div class="team-glass-card reveal-item">
+                        <div class="team-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800" alt="Doctor 2">
+                        </div>
+                        <div class="team-info text-center">
+                            <h3>Dr. Alieva</h3>
+                            <span>Aesthetic Orthodontics</span>
+                        </div>
+                    </div>
+                    <div class="team-glass-card reveal-item">
+                        <div class="team-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&q=80&w=800" alt="Doctor 3">
+                        </div>
+                        <div class="team-info text-center">
+                            <h3>Dr. Tole</h3>
+                            <span>Cosmetic Restoration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. GALLERY SLIDER -->
+        <section id="gallery" class="section bg-soft">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="subtitle">Clinic Tour</span>
+                    <h2 class="title">The Environment</h2>
+                </div>
+                
+                <div class="swiper gallery-swiper reveal popup-shadow">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1598256989800-fea5f0082987?auto=format&fit=crop&q=80&w=1200" alt="Interior" class="rounded-img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=1200" alt="Modern Tools" class="rounded-img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=1200" alt="Comfortable Chair" class="rounded-img">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. TESTIMONIALS SLIDER -->
+        <section id="testimonials" class="section">
+            <div class="container relative">
+                <div class="section-header reveal text-center">
+                    <span class="subtitle">Curated Experiences</span>
+                    <h2 class="title">Patient Stories</h2>
+                </div>
+                
+                <div class="swiper testimonial-swiper reveal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-glass-card">
+                                <i class="ph-fill ph-quotes text-muted large-quote"></i>
+                                <p class="review">"A standard of care I've never experienced before. The clinic is breathtakingly clean, and the veneer placement was flawless."</p>
+                                <div class="client-meta">
+                                    <strong>Aigerim N.</strong>
+                                    <span>Aesthetic Patient</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-glass-card">
+                                <i class="ph-fill ph-quotes text-muted large-quote"></i>
+                                <p class="review">"From the moment you walk in, you realize this isn't a standard clinic. Impeccable service, zero pain during my implant surgery."</p>
+                                <div class="client-meta">
+                                    <strong>Timur S.</strong>
+                                    <span>Implant Patient</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-glass-card">
+                                <i class="ph-fill ph-quotes text-muted large-quote"></i>
+                                <p class="review">"Extremely professional. They perfectly aligned my teeth with invisible aligners in just 9 months. The team is fantastic."</p>
+                                <div class="client-meta">
+                                    <strong>Anna K.</strong>
+                                    <span>Orthodontic Patient</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination mt-4 position-static"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq" class="section">
+            <div class="container faq-container">
+                <div class="section-header text-center reveal">
+                    <span class="subtitle text-gold">FAQ</span>
+                    <h2 class="title" data-en="Common Questions" data-kz="Жиі қойылатын сұрақтар">Common Questions</h2>
+                </div>
+                
+                <div class="faq-list reveal">
+                    <div class="faq-item glassy">
+                        <button class="faq-question">
+                            <span data-en="Do you offer invisible aligners?" data-kz="Көрінбейтін элайнерлер бар ма?">Do you offer invisible aligners?</span>
+                            <i class="ph ph-caret-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-en="Yes, we specialize in premium aesthetic orthodontics including Invisalign and leading invisible aligner systems tailored directly for you." data-kz="Иә, біз премиум эстетикалық ортодонтияға, соның ішінде Invisalign-ге мамандандырыламыз.">Yes, we specialize in premium aesthetic orthodontics including Invisalign and leading invisible aligner systems tailored directly for you.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glassy">
+                        <button class="faq-question">
+                            <span data-en="Is the implant procedure painful?" data-kz="Имплантация процедурасы ауырта ма?">Is the implant procedure painful?</span>
+                            <i class="ph ph-caret-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-en="Absolutely not. We use the latest anesthetic technologies and microscopy to ensure your experience is comfortable and anxiety-free." data-kz="Абсолютті емес. Біз жайлылықты қамтамасыз ету үшін ең жаңа анестезия технологияларын қолданамыз.">Absolutely not. We use the latest anesthetic technologies and microscopy to ensure your experience is comfortable and anxiety-free.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glassy">
+                        <button class="faq-question">
+                            <span data-en="How long do veneers take?" data-kz="Винирлерді орнату қанша уақыт алады?">How long do veneers take?</span>
+                            <i class="ph ph-caret-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p data-en="A full premium veneer smile makeover typically takes 2-3 visits over the course of 10-14 days. We ensure the absolute highest precision." data-kz="Толық премиум винирлену әдетте 10-14 күн ішінде 2-3 келуді қажет етеді.">A full premium veneer smile makeover typically takes 2-3 visits over the course of 10-14 days. We ensure the absolute highest precision.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CONTACT PAGE / SECTION -->
+        <section id="contact" class="section bg-soft">
+            <div class="container">
+                <div class="contact-card glassy shadow-hover reveal">
+                    <div class="contact-info-panel">
+                        <span class="subtitle">Reach Out</span>
+                        <h2 class="title">Connect With Us</h2>
+                        <ul class="contact-details-list">
+                            <li>
+                                <i class="ph ph-map-pin"></i>
+                                <div>
+                                    <strong>Address</strong>
+                                    <p>Almaty: ul. Kazybek bi, 125/1 (Zhk Mechta)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="ph ph-phone"></i>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <p><a href="tel:+77770443335" class="hover-link">+7 777 044 33 35</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="ph ph-whatsapp-logo"></i>
+                                <div>
+                                    <strong>WhatsApp</strong>
+                                    <p><a href="https://wa.me/77770443335" target="_blank" class="hover-link">Chat on WhatsApp</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="ph ph-clock"></i>
+                                <div>
+                                    <strong>Hours</strong>
+                                    <p>Monday - Saturday: 09:00 - 20:00</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-map-panel">
+                        <!-- Placeholder for a real Google Maps Iframe, currently using a styling block that behaves like one -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.5540329587425!2d76.9298533!3d43.2519137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836eb4285b0d01%3A0x6d120a1db4da5e22!2zTWVjaHRh!5e0!3m2!1sen!2skz!4v1714494191024!5m2!1sen!2skz" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-text">Hayat<span class="fw-light">Dent.</span></span>
+                    </a>
+                    <p class="footer-desc mt-3" data-en="Almaty's Premium Dental Studio setting a new standard in oral aesthetics and comfort." data-kz="Ауыз қуысы эстетикасы мен жайлылығының жаңа стандартын белгілейтін Алматыдағы премиум стоматологиялық студиясы.">Almaty's Premium Dental Studio setting a new standard in oral aesthetics and comfort.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 data-en="Quick Links" data-kz="Сілтемелер">Quick Links</h4>
+                    <ul>
+                        <li><a href="#services" data-en="Treatments" data-kz="Емдеу">Treatments</a></li>
+                        <li><a href="#about" data-en="About Us" data-kz="Біз туралы">About Us</a></li>
+                        <li><a href="#team" data-en="Our Doctors" data-kz="Дәрігерлер">Our Doctors</a></li>
+                        <li><a href="#gallery" data-en="Gallery" data-kz="Галерея">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-en="Working Hours" data-kz="Жұмыс уақыты">Working Hours</h4>
+                    <ul>
+                        <li data-en="Mon - Fri: 09:00 - 20:00" data-kz="Дүйсенбі - Жұма: 09:00 - 20:00">Mon - Fri: 09:00 - 20:00</li>
+                        <li data-en="Saturday: 09:00 - 18:00" data-kz="Сенбі: 09:00 - 18:00">Saturday: 09:00 - 18:00</li>
+                        <li data-en="Sunday: Closed" data-kz="Жексенбі: Демалыс">Sunday: Closed</li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4 data-en="Follow Us" data-kz="Бізге қосылыңыз">Follow Us</h4>
+                    <div class="social-mini mt-2">
+                        <a href="https://www.instagram.com/hayatdent.kz/" aria-label="Instagram" target="_blank"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="https://wa.me/77770443335" aria-label="WhatsApp" target="_blank"><i class="ph ph-whatsapp-logo"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-bottom">
+                <p class="footer-copy">&copy; 2026 Hayat Dent Clinic. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
